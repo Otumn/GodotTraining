@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jqrfv3n1m6ff"
+path="res://.godot/imported/SM_Cube_CornerP.obj-206db3e9cf457a13946620625f7f3268.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_Cube_CornerP.obj-206db3e9cf457a13946620625f7f3268.mesh"]
+
+source_file="res://meshs/blocks/SM_Cube_CornerP.obj"
+dest_files=["res://.godot/imported/SM_Cube_CornerP.obj-206db3e9cf457a13946620625f7f3268.mesh", "res://.godot/imported/SM_Cube_CornerP.obj-206db3e9cf457a13946620625f7f3268.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

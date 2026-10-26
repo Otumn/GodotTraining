@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bxnup76i6g8yn"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3ijsxgn6fj68" path="res://meshs/blocks/SM_Cube_FaceP.obj" id="1_u52ul"]
+[ext_resource type="ArrayMesh" uid="uid://jqrfv3n1m6ff" path="res://meshs/blocks/SM_Cube_CornerP.obj" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dybdgohws70dm" path="res://player.tscn" id="3_oi3di"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_oi3di"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0b4ue"]
+sky_material = SubResource("ProceduralSkyMaterial_oi3di")
+
+[sub_resource type="Environment" id="Environment_f2txt"]
+background_mode = 2
+sky = SubResource("Sky_0b4ue")
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8kg6k"]
+
+[node name="Level" type="Node3D" unique_id=490457850]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1941033246]
+environment = SubResource("Environment_f2txt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1397381149]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Blockout" type="Node3D" parent="." unique_id=1940421374]
+
+[node name="SmCubeCornerP" type="MeshInstance3D" parent="Blockout" unique_id=1267932229]
+transform = Transform3D(5.771321, 2.362743, 1.6261343, -2.8682516, 4.754167, 3.272008, 0, -3.6538131, 5.308923, 2.721626, -3.1622057, -0.69700456)
+mesh = ExtResource("2_vonw3")
+
+[node name="SmCubeCornerP2" type="MeshInstance3D" parent="Blockout" unique_id=137693489]
+transform = Transform3D(1.3347749, 7.335503, -9.488283, -5.3705487, 8.90176, 6.1265473, 10.72354, 3.5451066, 4.24931, -12.448305, -3.1622057, -11.664429)
+mesh = ExtResource("2_vonw3")
+
+[node name="SmCubeCornerP4" type="MeshInstance3D" parent="Blockout" unique_id=390552872]
+transform = Transform3D(16.858467, 11.225727, -1.6781863, -9.500528, 14.02119, 5.1370964, 9.012678, -6.2178826, 8.554258, 0.85753345, -3.1622057, -22.181553)
+mesh = ExtResource("2_vonw3")
+
+[node name="SmCubeCornerP3" type="MeshInstance3D" parent="Blockout" unique_id=218554914]
+transform = Transform3D(5.173228, 8.124439, -7.269795, -5.3705482, 8.90176, 6.1265473, 9.487554, 0.6089835, 7.431973, -2.265461, -8.82693, 6.5800705)
+mesh = ExtResource("2_vonw3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blockout" unique_id=2084226131]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="SmCubeFaceP" type="MeshInstance3D" parent="Blockout/StaticBody3D" unique_id=1179034261]
+transform = Transform3D(-1, 1.509958e-07, 0, -1.509958e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_u52ul")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockout/StaticBody3D" unique_id=493049036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_8kg6k")
+
+[node name="Player" parent="." unique_id=2047537197 instance=ExtResource("3_oi3di")]
+transform = Transform3D(0.73969567, 0, -0.67294157, 0, 1, 0, 0.67294157, 0, 0.73969567, -2.1270278, -9.536743e-07, 3.4592946)

@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://d1uyvsqbwveu8"]
+
+[node name="OptionsMenu" type="CanvasLayer" unique_id=1681318967]
+
+[node name="Container" type="Control" parent="." unique_id=1336256571]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Container" unique_id=1073308443]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.28235295)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=49056052]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2118341642]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2115438566]
+layout_mode = 2
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=783288713]
+layout_mode = 2
+current_tab = 0
+
+[node name="TabBar" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=286032864]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/TabBar" unique_id=881105614]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer" unique_id=551636172]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=42224746]
+layout_mode = 2
+text = "Test"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1539936088]
+layout_mode = 2
+text = "Test"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1860628562]
+layout_mode = 2
+text = "Test"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1805369210]
+layout_mode = 2
+text = "Test"
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1191976168]
+layout_mode = 2
+text = "Test"
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=167630889]
+layout_mode = 2
+text = "Test"
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1536702724]
+layout_mode = 2
+text = "Test"
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1258100358]
+layout_mode = 2
+text = "Test"
+
+[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=208537178]
+layout_mode = 2
+text = "Test"
