@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://d1uyvsqbwveu8"]
 
+[ext_resource type="PackedScene" uid="uid://bqib0ojo27iae" path="res://UIcomponents/option_slider.tscn" id="1_lbr8e"]
+[ext_resource type="PackedScene" uid="uid://bem17owva63xn" path="res://UIcomponents/option_dropdown.tscn" id="2_t1lix"]
+[ext_resource type="PackedScene" uid="uid://b6seyfy7jfqqt" path="res://UIcomponents/option_keybind.tscn" id="3_4gmlt"]
+
 [node name="OptionsMenu" type="CanvasLayer" unique_id=1681318967]
 
 [node name="Container" type="Control" parent="." unique_id=1336256571]
@@ -40,52 +44,45 @@ horizontal_alignment = 1
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=783288713]
 layout_mode = 2
+size_flags_vertical = 3
 current_tab = 0
 
-[node name="TabBar" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=286032864]
+[node name="Controls" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=196561135]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/TabBar" unique_id=881105614]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls" unique_id=276511060]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer" unique_id=551636172]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer" unique_id=96193935]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=42224746]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer" unique_id=2058751425]
 layout_mode = 2
-text = "Test"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1539936088]
+[node name="OptionSlider" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=898852826 instance=ExtResource("1_lbr8e")]
 layout_mode = 2
-text = "Test"
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1860628562]
+[node name="OptionDropdown" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2082667996 instance=ExtResource("2_t1lix")]
 layout_mode = 2
-text = "Test"
+options = Array[String](["one", "two", "three"])
 
-[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1805369210]
+[node name="OptionKeybind" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=648205891 instance=ExtResource("3_4gmlt")]
 layout_mode = 2
-text = "Test"
+input = "move_forward"
 
-[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1191976168]
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=982298227]
 layout_mode = 2
-text = "Test"
-
-[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=167630889]
-layout_mode = 2
-text = "Test"
-
-[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1536702724]
-layout_mode = 2
-text = "Test"
-
-[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=1258100358]
-layout_mode = 2
-text = "Test"
-
-[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/TabBar/MarginContainer/VBoxContainer" unique_id=208537178]
-layout_mode = 2
-text = "Test"
+text = "Exit"

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://drlmay7on2l2b"]
+
+[node name="UIOption" type="Control" unique_id=898852826]
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1560398358]
+custom_maximum_size = Vector2(-1, 25)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ParamLabel" type="Label" parent="HBoxContainer" unique_id=304867635]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "Parameter name"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer" unique_id=1602679531]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="SettingEdit" type="HBoxContainer" parent="HBoxContainer" unique_id=258047075]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2

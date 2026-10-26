@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bem17owva63xn"]
+
+[ext_resource type="PackedScene" uid="uid://drlmay7on2l2b" path="res://UIcomponents/ui_option.tscn" id="1_heivs"]
+[ext_resource type="Script" uid="uid://b4sicxcwewspp" path="res://UIcomponents/option_dropdown.gd" id="2_1nkuk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ui8po"]
+
+[node name="OptionDropdown" unique_id=898852826 instance=ExtResource("1_heivs")]
+script = ExtResource("2_1nkuk")
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/SettingEdit" parent_id_path=PackedInt32Array(258047075) index="0" unique_id=1756153626]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/SettingEdit" parent_id_path=PackedInt32Array(258047075) index="1" unique_id=1477995592]
+layout_mode = 2
+theme_override_constants/separation = 250
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ui8po")
+
+[connection signal="item_selected" from="HBoxContainer/SettingEdit/OptionButton" to="." method="_on_option_button_item_selected"]
