@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="SaveTraining"
+config/name="GodotTraining"
 run/main_scene="uid://bxnup76i6g8yn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
@@ -27,6 +27,11 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="SaveTraining"
+
+[global_group]
+
+OptionConfig=""
+KeybindButton=""
 
 [input]
 

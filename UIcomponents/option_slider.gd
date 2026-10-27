@@ -3,6 +3,7 @@ extends Control
 
 signal value_updated(old_value:float, new_value:float)
 
+@export var config_section = "Section"
 @export var parameter_name: String = "Slider"
 @export var min_value:float = 0.01
 @export var max_value:float = 1.0
@@ -37,3 +38,6 @@ func _on_incr_btn_pressed() -> void:
 
 func _on_decr_btn_pressed() -> void:
 	update_value(current_value - step)
+
+func get_config_value() -> Variant:
+	return current_value

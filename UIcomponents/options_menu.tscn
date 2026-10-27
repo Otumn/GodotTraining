@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d1uyvsqbwveu8"]
 
-[ext_resource type="PackedScene" uid="uid://bqib0ojo27iae" path="res://UIcomponents/option_slider.tscn" id="1_lbr8e"]
-[ext_resource type="PackedScene" uid="uid://bem17owva63xn" path="res://UIcomponents/option_dropdown.tscn" id="2_t1lix"]
-[ext_resource type="PackedScene" uid="uid://b6seyfy7jfqqt" path="res://UIcomponents/option_keybind.tscn" id="3_4gmlt"]
+[ext_resource type="PackedScene" uid="uid://bqib0ojo27iae" path="res://UIcomponents/option_slider.tscn" id="1_6ejtd"]
+[ext_resource type="PackedScene" uid="uid://bem17owva63xn" path="res://UIcomponents/option_dropdown.tscn" id="2_7d14b"]
+[ext_resource type="PackedScene" uid="uid://b6seyfy7jfqqt" path="res://UIcomponents/option_keybind.tscn" id="3_qh0bg"]
+[ext_resource type="PackedScene" uid="uid://danmy8reisfqp" path="res://UIcomponents/option_dropdown_display_mode.tscn" id="4_5d5jh"]
+[ext_resource type="PackedScene" uid="uid://4uclftafok4d" path="res://UIcomponents/option_dropdown_resolution.tscn" id="5_xdhn8"]
 
 [node name="OptionsMenu" type="CanvasLayer" unique_id=1681318967]
 
@@ -72,16 +74,31 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 40
 
-[node name="OptionSlider" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=898852826 instance=ExtResource("1_lbr8e")]
+[node name="OptionSlider" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=898852826 instance=ExtResource("1_6ejtd")]
 layout_mode = 2
 
-[node name="OptionDropdown" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2082667996 instance=ExtResource("2_t1lix")]
+[node name="OptionDropdown" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2082667996 instance=ExtResource("2_7d14b")]
 layout_mode = 2
 options = Array[String](["one", "two", "three"])
 
-[node name="OptionKeybind" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=648205891 instance=ExtResource("3_4gmlt")]
+[node name="OptionKeybind" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=648205891 instance=ExtResource("3_qh0bg")]
 layout_mode = 2
 input = "move_forward"
+
+[node name="OptionKeybind2" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1405608884 instance=ExtResource("3_qh0bg")]
+layout_mode = 2
+input = "move_backward"
+
+[node name="OptionKeybind3" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=23856115 instance=ExtResource("3_qh0bg")]
+layout_mode = 2
+input = "jump"
+
+[node name="OptionDropdownDisplayMode" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1777662091 instance=ExtResource("4_5d5jh")]
+layout_mode = 2
+
+[node name="OptionDropdownResolution" parent="MarginContainer/VBoxContainer/TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1028547942 instance=ExtResource("5_xdhn8")]
+layout_mode = 2
+options = Array[String](["1280x720", "1600x900", "1920x1080"])
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=982298227]
 layout_mode = 2

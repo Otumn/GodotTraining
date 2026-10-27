@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://drlmay7on2l2b" path="res://UIcomponents/ui_option.tscn" id="1_aonxl"]
 [ext_resource type="Script" uid="uid://dlthppnhntduq" path="res://UIcomponents/option_slider.gd" id="1_m5qos"]
 
-[node name="OptionSlider" unique_id=898852826 instance=ExtResource("1_aonxl")]
+[node name="OptionSlider" unique_id=898852826 groups=["OptionConfig"] instance=ExtResource("1_aonxl")]
 script = ExtResource("1_m5qos")
+
+[node name="ParamLabel" parent="HBoxContainer" parent_id_path=PackedInt32Array(1560398358) index="0" unique_id=304867635]
+text = "Slider"
 
 [node name="Slider" type="HSlider" parent="HBoxContainer/SettingEdit" parent_id_path=PackedInt32Array(258047075) index="0" unique_id=214852299]
 custom_minimum_size = Vector2(350, 0)

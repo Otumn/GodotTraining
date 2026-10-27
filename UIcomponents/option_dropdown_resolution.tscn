@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://4uclftafok4d"]
+
+[ext_resource type="PackedScene" uid="uid://bem17owva63xn" path="res://UIcomponents/option_dropdown.tscn" id="1_js4aw"]
+[ext_resource type="Script" uid="uid://dd7gl56dd817v" path="res://UIcomponents/option_dropdown_resolution.gd" id="2_vtu3e"]
+
+[node name="OptionDropdownResolution" unique_id=898852826 instance=ExtResource("1_js4aw")]
+script = ExtResource("2_vtu3e")
+
+[node name="ParamLabel" parent="HBoxContainer" parent_id_path=PackedInt32Array(1560398358) index="0" unique_id=304867635]
+text = "Resolution"

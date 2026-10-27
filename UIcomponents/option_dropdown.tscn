@@ -5,8 +5,11 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ui8po"]
 
-[node name="OptionDropdown" unique_id=898852826 instance=ExtResource("1_heivs")]
+[node name="OptionDropdown" unique_id=898852826 groups=["OptionConfig"] instance=ExtResource("1_heivs")]
 script = ExtResource("2_1nkuk")
+
+[node name="ParamLabel" parent="HBoxContainer" parent_id_path=PackedInt32Array(1560398358) index="0" unique_id=304867635]
+text = "Dropdown"
 
 [node name="OptionButton" type="OptionButton" parent="HBoxContainer/SettingEdit" parent_id_path=PackedInt32Array(258047075) index="0" unique_id=1756153626]
 layout_mode = 2
